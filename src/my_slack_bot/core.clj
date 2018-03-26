@@ -16,9 +16,10 @@
 (defn -main [& args]
   (let [[{:keys [token]} args banner] (cli args
                                            ["-h" "--help" "Show help" :flag true :default false]
-                                           ["-t" "--token TOKEN" "Bot User OAuth Access Token"])]
+                                           ["-t" "--token" "Bot User OAuth Access Token"])]
     (if token 
       (let [{:keys [events-publication dispatcher start]} (connect token)]
+        (log/info "Starting MySlackBot")
         (sub-to-event events-publication :message #(message-receiver dispatcher %)))
       (do 
         (log/error "Token not specified\n" banner)
