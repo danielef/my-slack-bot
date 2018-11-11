@@ -3,7 +3,7 @@
 Un Bot para Slack en Clojure que responde a groserías con su definición.
 
 ## Diccionario
-El dicccionario es muy sencillo y lo descargué de este [blog](http://esclavoseternos.blogspot.mx/2010/06/diccionario-de-groserias-mexicanas.html)
+El diccionario es muy sencillo y lo descargué de este [blog](http://esclavoseternos.blogspot.mx/2010/06/diccionario-de-groserias-mexicanas.html)
 
 ## Compilar
 ```
